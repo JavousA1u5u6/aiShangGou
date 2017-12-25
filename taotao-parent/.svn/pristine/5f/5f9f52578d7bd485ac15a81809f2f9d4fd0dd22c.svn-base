@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.taotao</groupId>
+  <artifactId>taotao-parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <!-- 集中定义版本号 -->
+  	<properties>
+  		
+  	</properties>
+  
+  <!-- 在父工程管理jar的版本号   -->
+  	<dependencyManagement>
+  		<dependencies>
+  			<!-- 时间操作组件 joda-time :提供了很多时间操作组件 -->
+  			
+  			
+  			<!-- Apache工具组件  lang3 io net  -->
+  			
+  			<!-- Jackson 处理工具包 用处 springmvc 响应 json请求 -->
+  			
+  			<!-- httpclient  模拟浏览器 -->
+  			
+  			<!-- quartz任务调度框架  :指定在什么时间做什么事  替代人力去自动操作-->
+  			
+  			<!-- provided  打包不打   编译 测试 运行 打包 -->
+  			
+  			<!-- dubbo 相关zooker -->
+  			
+  			<!-- java编译插件  -->
+  			
+  		</dependencies>
+  	</dependencyManagement>
+  	
+</project>

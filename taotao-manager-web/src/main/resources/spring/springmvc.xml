@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo" 
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+        http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+	<!-- 需要使用dubboo  使用前缀  以及约束 -->
+	<!-- 加载属性文件 -->
+	<!-- <context:property-placeholder location="classpath:resource/resource.properties" /> -->
+	<context:component-scan base-package="com.taotao.controller" />
+	<!-- 注解驱动 即可替代 handlermapping 和 handleradapter -->
+	<mvc:annotation-driven />
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	<!-- 静态资源映射 -->
+	<mvc:resources location="/WEB-INF/js/" mapping="/js/**"/>
+	<mvc:resources location="/WEB-INF/css/" mapping="/css/**"/>
+	<!-- 定义文件上传解析器 -->
+	<!-- <bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		设定默认编码
+		<property name="defaultEncoding" value="UTF-8"></property>
+		设定文件上传的最大值5MB，5*1024*1024
+		<property name="maxUploadSize" value="5242880"></property>
+	</bean> -->
+	<!-- 引用dubbo服务 -->
+	<!-- 工程名  放在注册中心 -->
+	<!-- 不用指定端口号暴露服务 dubbo protcol -->
+	<dubbo:application name="taotao-manager-web"/>
+	<!-- 需要去注册中心查询 -->
+	<dubbo:registry protocol="zookeeper" address="192.168.149.128:2181"/>
+	<!-- 应用服务之后 实际就是在服务消费方 生成了这么一个接口 -->	
+	 <dubbo:reference interface="com.taotao.service.ItemService" id="itemService" />
+	
+	<!-- <dubbo:reference interface="com.taotao.service.ItemCatService" id="itemCatService" />
+	<dubbo:reference interface="com.taotao.content.service.ContentCategoryService" id="contentCategoryService" />
+	<dubbo:reference interface="com.taotao.content.service.ContentService" id="contentService" /> -->
+	
+</beans>
