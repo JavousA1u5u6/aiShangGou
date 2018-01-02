@@ -2,8 +2,9 @@ package com.aishanggou.content.service;
 
 import java.util.List;
 
-import com.aishanggou.common.pojo.TaotaoResult;
-import com.taotao.pojo.TbContent;
+import com.aishanggou.po.TbContent;
+import com.taotao.common.pojo.TaotaoResult;
+
 
 public interface ContentService {
 

@@ -2,8 +2,8 @@ package com.aishanggou.content.service;
 
 import java.util.List;
 
-import com.aishanggou.common.pojo.EasyUITreeNode;
-import com.aishanggou.common.pojo.TaotaoResult;
+import com.taotao.common.pojo.EasyUITreeNode;
+import com.taotao.common.pojo.TaotaoResult;
 
 public interface ContentCategoryService {
 
