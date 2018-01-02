@@ -28,6 +28,7 @@ public class SearchController {
 	@RequestMapping("/search")
 	public String searchItem(@RequestParam("q")String queryString, 
 			@RequestParam(defaultValue="1")Integer page, Model model) throws Exception {
+		//处理get请求乱码
 		queryString = new String(queryString.getBytes("iso8859-1"), "utf-8");
 		//调用服务搜索商品信息
 		SearchResult searchResult = searchService.search(queryString, page, ITEM_ROWS);
