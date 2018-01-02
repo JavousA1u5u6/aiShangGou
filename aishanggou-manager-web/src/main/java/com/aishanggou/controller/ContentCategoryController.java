@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.aishanggou.common.pojo.EasyUITreeNode;
-import com.aishanggou.common.pojo.TaotaoResult;
-import com.aishanggou.content.service.ContentCategoryService;
+import com.taotao.common.pojo.EasyUITreeNode;
+import com.taotao.common.pojo.TaotaoResult;
+import com.taotao.content.service.ContentCategoryService;
+
 
 @Controller
 public class ContentCategoryController {
@@ -45,10 +46,4 @@ public class ContentCategoryController {
 		return taotaoResult;
 	}
 	
-	@RequestMapping("content/category/delete/")
-	@ResponseBody
-	public TaotaoResult deleteContentCat(Long id){
-		TaotaoResult result = contentCategoryService.deleteContentCat(id);
-		return result;
-	}
 }
