@@ -103,7 +103,7 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.taotao.po.TbContentCategory" >
-    <selectKey keyProperty="id" resultType="long" order="AFTER">
+    <selectKey keyProperty="id" resultType="Long" order="AFTER">
     		SELECT LAST_INSERT_ID();
     </selectKey>
     insert into tb_content_category (id, parent_id, name, 
