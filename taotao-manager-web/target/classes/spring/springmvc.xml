@@ -13,7 +13,7 @@
 	<!-- 需要使用dubboo  使用前缀  以及约束 -->
 	<!-- 加载属性文件 -->
 	<!-- <context:property-placeholder location="classpath:resource/resource.properties" /> -->
-	<context:component-scan base-package="com.taotao.controller" />
+	<context:component-scan base-package="com.aishanggou.controller" />
 	<!-- 注解驱动 即可替代 handlermapping 和 handleradapter -->
 	<mvc:annotation-driven />
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

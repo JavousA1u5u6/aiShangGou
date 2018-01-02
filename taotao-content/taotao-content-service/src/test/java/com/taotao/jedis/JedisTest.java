@@ -7,7 +7,7 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.taotao.content.jedis.JedisClient;
+import com.aishanggou.content.jedis.JedisClient;
 
 import redis.clients.jedis.HostAndPort;
 import redis.clients.jedis.Jedis;

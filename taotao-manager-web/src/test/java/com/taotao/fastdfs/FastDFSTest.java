@@ -11,7 +11,7 @@ import org.csource.fastdfs.TrackerClient;
 import org.csource.fastdfs.TrackerServer;
 import org.junit.Test;
 
-import com.taotao.utils.FastDFSClient;
+import com.aishanggou.utils.FastDFSClient;
 
 public class FastDFSTest {
 	

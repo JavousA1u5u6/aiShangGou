@@ -6,12 +6,12 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.aishanggou.mapper.TbItemMapper;
+import com.aishanggou.po.TbItem;
+import com.aishanggou.po.TbItemExample;
+import com.aishanggou.po.TbItemExample.Criteria;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.taotao.mapper.TbItemMapper;
-import com.taotao.po.TbItem;
-import com.taotao.po.TbItemExample;
-import com.taotao.po.TbItemExample.Criteria;
 /**
  * 测试mybatis分页插件 pageHelper的使用
  * @author JavousAiMe

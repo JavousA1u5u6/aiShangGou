@@ -13,7 +13,7 @@
 		<constructor-arg name="host" value="192.168.25.153"/>
 		<constructor-arg name="port" value="6379"/>
 	</bean>
-	<bean id="jedisClientPool" class="com.taotao.content.jedis.JedisClientPool"/>
+	<bean id="jedisClientPool" class="com.aishanggou.content.jedis.JedisClientPool"/>
 	<!-- 集群版 -->
 	<!-- <bean id="jedisCluster" class="redis.clients.jedis.JedisCluster">
 		<constructor-arg name="nodes">
