@@ -103,7 +103,6 @@ public class ActiveMQTest {
 			}
 				
 		}*/
-		
 		consumer.close();
 		session.close();
 		connection.close();
