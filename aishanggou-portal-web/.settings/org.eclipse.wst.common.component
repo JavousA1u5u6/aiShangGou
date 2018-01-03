@@ -4,6 +4,12 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="taotao-content-interface-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/taotao-content-interface/taotao-content-interface">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="taotao-manager-pojo-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/taotao-manager-pojo/taotao-manager-pojo">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="java-output-path" value="/aishanggou-portal-web/target/classes"/>
         <property name="context-root" value="taotao-portal-web"/>
     </wb-module>
