@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -22,9 +23,13 @@ public class PictureController {
 	//简单类型注入
 	@Value("${IMAGE_SERVER_URL}")
 	private String IMAGE_SERVER_URL;
-	@RequestMapping(value = "/pic/upload",produces = MediaType.TEXT_PLAIN_VALUE+";charset=utf-8")
-	@ResponseBody
+	/*@RequestMapping(value = "/pic/upload",produces = MediaType.TEXT_PLAIN_VALUE+";charset=utf-8"*/)
+	@RequestMapping(method = RequestMethod.DELETE,value="/item/{id}",produces=MediaType.TEXT_PLAIN_VALUE+";charset=utf-8")
+    @ResponseBody
 	/**
+	 * requestMapping时一个用来处理请求地址映射
+	 * produces 用于指定响应的数据的类型
+	 * consumes 用于指定请求的提交内容类型 content-type
 	 * 需要返回一个map 或者对象 中  erro url
 	 * 拿到这个url  进行回显
 	 * 失败 需要返回错误消息

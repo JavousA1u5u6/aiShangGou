@@ -1,5 +1,10 @@
 package com.aishanggou.controller;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -34,13 +39,17 @@ public class ItemController {
 		//这里需要注意 因为传递的时 json  所以需要将 pojo类 序列化
 		return dataGridResult;
 	}
-/*	
+	
 	@RequestMapping
-	public String updateItem(TbItem item){
-		
+	public String updateItem(TbItem item,HttpServletRequest request,HttpServletResponse response){
+		Cookie[] cookies = request.getCookies();
+			HttpSession session = request.getSession();
+		Cookie cookie = new Cookie(name, value);
+		cookie.setMaxAge(30*60);
 		itemService.updateItem(item);
+		response.
 		return "forward:list";
-	}*/
+	}
 	
 	/**
 	 * 此请求为异步请求  需要返回数据     json

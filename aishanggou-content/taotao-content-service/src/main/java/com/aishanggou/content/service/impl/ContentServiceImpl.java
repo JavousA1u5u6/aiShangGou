@@ -73,6 +73,7 @@ public class ContentServiceImpl implements ContentService {
 		//向缓存中保存结果
 		try {
 			jedisClient.hset(CONTENT_KEY, cid + "", JsonUtils.objectToJson(list));
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
